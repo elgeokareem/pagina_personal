@@ -1,0 +1,26 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "bloque1 bloque2"
+    "referencias referencias";
+    font-size: 0.5em;
+}
+
+.bloque-1 {
+    grid-area: bloque1;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.bloque-2 {
+    grid-area: bloque2;
+    display: flex;
+    justify-content: center;
+}
+
+.referencias {
+    grid-area: referencias;
+}

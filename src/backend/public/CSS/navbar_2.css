@@ -1,0 +1,112 @@
+.navbar-container {
+  position: sticky;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  height: var(--nav-size);
+  background-color: var(--bg);
+}
+
+.navbar-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: var(--nav-size);
+  width: 100%;
+}
+
+.navbar-list a {
+  height: var(--nav-size);
+}
+
+.list-item {
+  padding: 0;
+  margin: 0;
+  font-size: 0.4em;
+  height: 100%;
+}
+
+.list-item:hover {
+  background-color: var(--bg-accent);
+  transition: background 500ms ease;
+  cursor: pointer;
+}
+
+li:nth-child(1) {
+  padding-left: var(--padding-nav-items);
+  padding-right: var(--padding-nav-items);
+  margin-right: auto;
+}
+
+li:not(:nth-child(1)) {
+  padding-left: var(--padding-nav-items);
+  padding-right: var(--padding-nav-items);
+}
+
+.list-item-element {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* SECCION DEL DROPDOWN */
+.dropdown {
+  position: absolute;
+  top: 60px;
+  width: 200px;
+  background-color: var(--bg);
+  border: 1px solid antiquewhite;
+  border-radius: 3px;
+  transform: translateX(-8px);
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-accent);
+  transition: background 500ms ease;
+}
+
+.dropdown-icon {
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+/* CSS TRANSITION DROPDOWN ---------------- */
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+
+.menu-secondary-enter {
+  transform: translateX(110%);
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit {
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
+}

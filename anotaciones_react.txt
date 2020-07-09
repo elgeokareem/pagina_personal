@@ -1,0 +1,68 @@
+1- Lo primero es instalar webpack
+    npm i webpack -D webpack-cli -D
+
+2- Se crea el archivo "webpack.config.js"
+    path = require("path")
+
+    module.exports = {
+        entry: path.join(_0_dirname, "src", "frontend", "index_react.js"),
+        filename: "bundle.js"
+    }
+
+3- De aqui instalamos react:
+    npm i react react-dom
+
+4- Instalamos BABEL para que se pueda entender el JSX
+
+    npm install --save-dev @babel/core
+    npm i babel-loader
+    npm i @babel/preset-react -D
+    npm i @babel/preset-env -D
+
+5- Se crea el archivo ".babelrc"
+
+    {
+        "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+        ]
+    }
+
+6- Se modifica el archivo config de webpack (nota dentro del config)
+    module.exports = {
+        entry: "./src/frontend/index_react.js",
+        output: {
+            path: __dirname + "/src/public",
+            filename: "bundle.js"
+        },
+
+        //Paso 6
+        module: {
+            rules: [
+                {
+                    use:"babel-loader",
+                    test: /\.js$/,
+                    exclude: /node_modules/
+                }
+            ]
+        }
+    };
+
+7- Se modifica el package.json en el webpack para ponerle "--watch"
+    "webpack": "webpack --mode development --watch"
+
+// REACT ROUTER
+
+8- Para instalar el router:
+    npm install --save react-router-dom
+
+9- En el componente a hacer render se hace los imports
+    import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+    9.1- Todo lo que se ponga dentro del tag Router tendra la capacidad de hacer routing
+    9.2- Sobre Switch
+        A <Switch> looks through all its children <Route>
+          elements and renders the first one whose path
+          matches the current URL. Use a <Switch> any time
+          you have multiple routes, but you want only one
+          of them to render at a time

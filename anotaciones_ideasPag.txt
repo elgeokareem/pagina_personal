@@ -1,0 +1,5 @@
+1- Secciones de la pagina:
+    1.1 Home (Izquierda)
+    1.2 Proyects (Dropdown):: Javascript-React-ML-Scraping
+    1.3 About me
+    1.4 Contact

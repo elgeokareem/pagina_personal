@@ -1,0 +1,22 @@
+1- Se instala express, axios, mongoose.
+    npm i express axios mongoose
+
+2- Se instala nodemon
+    npm i nodemon
+
+3- Libreria moderna de particles js
+    npm install react-tsparticles
+
+4- Se instala libreria para montar componentes con react
+    npm install @svgr/webpack --save-dev
+    https://blog.logrocket.com/how-to-use-svgs-in-react/
+    ESTA VERGA NO DIO
+
+5- Para animaciones en el menu:
+    npm install react-transition-group
+
+    --Se necesita definir un estado que permita saber cual menu 
+    es visible actualmente
+
+    -- Esta libreria no maneja animaciones, lo que hace es colocar
+    clases para uno manejar las animaciones con CSS
